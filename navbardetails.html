@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar With Details</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+<style>
+header{
+        background-color: black;
+        color: white;
+        font-size: 25px;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 15px;
+}
+footer{
+        background-color: black;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        padding: 15px;
+}
+section{
+    height: 400px;
+    display: grid;
+    grid-template-columns:6fr 3fr 3fr;
+}
+.brand{
+    font-size: 25px;
+    font-weight: bold;
+    background-color: yellow;
+    width: 120px;
+    padding-left: 5px;
+}
+summary{
+    font-size: 15px;
+}
+nav{
+    height: 200px;
+}
+menu div{
+    border: 1px solid black;
+    width: 100px;
+    padding: 1px;
+    margin: top 2px;
+}
+.wear{
+    border: 1px solid black;
+    width: 100px;
+    padding: 1px;
+    margin: top 2px;
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <span class="bi bi bi-shop">Shopping Site</span>
+    </header>
+    <section>
+    <nav>
+        <div class="brand">Shopping</div>
+    <details>
+        <summary class="bi-bi bi-house"> Home</summary>
+        <menu>
+            <div>Login</div>
+            <div>Offers</div>
+        </menu>
+    </details>
+    <details>
+        <summary class="bi bi bi-phone"> Electronics</summary>
+        <menu>
+            <div>Laptops</div>
+            <div>Mobiles</div>
+            <div>Tablets</div>
+            <div>Earphones</div>
+        </menu>
+    </details>
+    <details>
+        <summary class="bi bi-person"> Wears</summary>
+        <Menu>
+            <details>
+                <summary class="wear" >Mens Wear</summary>
+                <Div>Pants</Div>
+                <div>Shirts</div>
+                <div>T-Shirts</div>
+            </details>
+            <span>Kids Wear</span><br>
+            <span>Ledies Wear</span>
+        </Menu>
+    </details>
+    </nav>
+    <main>
+        This is Main content
+    </main>
+    <aside>
+        Ads/Social Sites
+    </aside>
+    </section>
+    <footer>
+        &copy;Copyright2022
+    </footer>
+</body>
+</html>

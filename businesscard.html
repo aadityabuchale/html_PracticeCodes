@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+   
+    <style>
+        body{
+            font-family: poppins;
+            font-weight: 400;
+            background: rgb(43, 43, 43);
+        }
+        .container{
+            text-align: center;
+            background-size: cover;
+            width: 1200px;
+            margin-left: 150px;  
+        }
+        .profile img{
+            position: absolute;
+            left: 280px;
+            bottom: 320px;
+            box-shadow: 0px 0px 4px 1px rgb(192, 192, 192);
+        }
+        .catlogpage{
+            background:linear-gradient(135deg, #ce9ffc 0%,#7367F0 100%);
+            width: 100%;
+            height: 600px;
+            padding: 50px;
+            margin-left: -60px;
+            border-radius: 7px;
+            margin-top: -5px;
+            margin-bottom: 10px;
+        }
+        .catlog-group{
+            display: flex;
+            margin-left: 400px;
+            margin-top: -450px;
+            background:linear-gradient(135deg, #ff9d6c 0%,#bb4e75 100%);
+            height: 550px;
+            border-radius: 7px;
+            padding-top: 20px;
+            border: 1px solid rgb(130, 130, 130);
+            transition: 0.4s;
+        }
+        .catlog-group:hover{
+            box-shadow: 0px 0px 8px rgb(41, 41, 41);
+            transition: 0.5s ease;
+            
+        }
+        .row1 , .row2{
+            margin-top: 90px;
+            margin-left: 75px;
+        }
+        .catlog{
+            padding: 5px;
+            border: 1px solid rgb(44, 44, 44);
+            width: 270px;
+            display: flex;
+            background: #fff;
+            border-radius: 5px;
+            align-items: center;
+            margin-bottom: 30px;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+        .catlog:hover{
+            box-shadow: 0px 0px 5px  rgb(48, 48, 48);
+            transition: 0.5s;
+            cursor: pointer;
+            
+        }
+        .catlog img{
+            border-radius: 5px;      
+        }
+        .catlog img:hover{
+            padding: 0px;
+            transition: 0.5s;
+        }
+        .catlog-heading{
+            position: absolute;
+            margin-top: -430px;
+            font-size: 35px;
+            font-weight: bold;
+            margin-left: 690px;
+            color: #000;
+        }
+        .social-heading{
+            font-size: 26px;
+            padding-top: 50px;
+            padding: 25px;
+            margin-left: -40px;
+            font-weight: 500;
+            
+        }
+        .socialsites{
+            margin-top:120px;
+            background:linear-gradient(135deg, #F36265 0%,#961276 100%);
+            border-radius: 6px;
+            width: 300px;
+            height: 350px;
+            border: 1px solid rgb(123, 123, 123);
+            transition: 0.4s;
+        }
+        .socialsites:hover{
+            box-shadow: 0px 0px 6px rgb(41, 41, 41);
+            transition: 0.6s ease;
+        }
+        .social-links{
+            display: grid;
+            margin-right: 5px;
+            margin-top: -7px;  
+        }
+        .social-links div{ 
+            text-align: center;
+            margin-bottom: 20px;
+            border: #918ae7 solid 1px;
+            padding: 7px;
+            margin-left: 50px;
+            width: 180px;
+            border-radius: 4px;
+            background:linear-gradient(135deg, #ffffff 0%,#eadaf4 100%);
+            
+        }
+        .social-links div:hover{
+            box-shadow: 0px 0px 3px rgb(62, 62, 62);
+            transition:all 0.4s ease;
+            border:1.px solid white;
+            cursor: pointer;
+        }
+        .address{
+            background:linear-gradient(135deg, #6ffbb5 0%,#5cb8bd 100%);
+            width: 350px;
+            height: 110px;
+            border-radius: 5px;
+            border: 1px solid #fcc9db;
+            margin-top: -90px;
+            transition: 0.4s;
+        }
+        .address:hover{
+            box-shadow: 0px 0px 6px rgb(41, 41, 41);
+            transition: 0.5s ease;
+            cursor: pointer;
+        }
+        .address address{
+            padding-top: 5px;
+        }
+        .address-heading{
+            font-size: 26px;
+            font-weight: 500;
+            padding-top: 5px;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        a:hover{
+            font-weight: 500;
+            transition: 0s all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <img src="./public/Images/Cover Photo6.png " style="border-radius: 7px;" width="90%">
+        </div>
+        <div class="profile">
+            <img src="./public/Images/dpimg2.JPG" style="border-radius: 6px;" width="200px">
+        </div>
+        <div class="catlogpage">
+            <div class="socialsites">
+                <div class="social-heading">
+                    Contact Us-
+                </div>
+                <div class="social-links">
+                    <a href=""><div class="bi bi-instagram"> Instagram</div></a>
+                    <a href=""><div class="bi bi-facebook"> Facebook</div></a>
+                    <a href=""><div class="bi bi-twitter" > Twitter</div></a>
+                    <a href="https://www.linkedin.com/in/aaditya-buchale/" target="_blank" ><div class="bi bi-linkedin"> Linkedin</div></a>
+                </div>
+            </div>
+            <div class="catlog-heading">-Catalogue-</div>
+            <div class="catlog-group">               
+                <div class="row1">
+                    <div class="catlog">
+                        <img src="./public/Images/wedding-photography.webp" width="100px">
+                        <span> Wedding Photography</span>
+                    </div>
+                    <div class="catlog">
+                        <img src="./public/Images/birthday-shoot.jpg" width="100px">
+                        <span> Birthday Photography</span>
+                    </div>
+                    <div class="catlog">
+                        <img src="./public/Images/portriat-photo.jpg" width="100px" height="65px">
+                        <span style="margin-left: 28px;"> Portriat <br >&nbsp; Photography</span>
+                    </div>
+                    <div class="catlog">
+                        <img src="./public/Images/meternity-shoot.jpg" width="100px" height="65px">
+                        <span style="margin-left: 28px;"> Meternity <br >&nbsp; Photography</span>
+                    </div>
+                </div>
+                <div class="row2">
+                    <div class="catlog">
+                        <img src="./public/Images/model-shoot.jpg" width="100px">
+                        <span style="margin-left:28px"> Model <br> Photography</span>
+                    </div>
+                    <div class="catlog">
+                        <img src="./public/Images/low-light.jpg" width="100px" height="65px">
+                        <span style="margin-left:28px"> Low Light <br> Photography</span>
+                    </div>
+                    <div class="catlog">
+                        <img src="./public/Images/PreWedding-Shoot.jpg" width="100px" height="65px">
+                        <span> Pre-Wedding Photography</span>
+                    </div>
+                    <div class="catlog">
+                            <img src="./public/Images/Product-Photography.png" width="100px" height="62px">
+                            <span> Product Photography</span>
+                    </div>
+                </div>
+            </div>
+            <div class="address">
+                <div class="address-heading">Address-</div>
+                <address>Gangakhed Road,Parbhani,<br> Maharashtra 431401</address>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

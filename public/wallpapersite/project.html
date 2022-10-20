@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: poppins,sans-serif;
+            box-sizing: border-box;
+        }
+        form{
+            color: white;
+        }
+        .header{
+            height: 100vh;
+            width: 100%;
+            padding: 0 8%;
+            /* background: #080008; */
+            position: relative;    
+        }
+        .back-video{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index:-100;
+        }
+        @media(min-aspect-ratio:16/9){
+            .back-video{
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media(max-aspect-ratio:16/9){
+            .back-video{
+                width: auto;
+                height: 100%;
+            }
+        }
+        .logo{
+            color: white;
+            font-size: 23px;
+            font-weight: 500;
+            padding: 10px 0;
+        }
+        .logo:hover{
+            cursor: pointer;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+        }
+        .navlink{
+            padding: 28px 0;
+        }
+        .navlink li{
+            display: inline-block;
+            margin: 0 15px;
+        }
+        .navlink li a{
+            text-decoration: none;
+            color:#fff;
+            padding: 5px 0;
+            position: relative;
+        }
+        .navlink li a::after{
+            content: '';
+            background: #ff3d00;
+            width: 0;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left:0;
+            transition: 0.5s;
+        }
+        .navlink li a:hover:after{
+            width: 100%;
+
+        }
+        .btn{
+            background: #ff3d00;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .content{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            max-width: 900px;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            color: #fff;
+            padding-top: 30px;
+        }
+        .content h1{
+            font-size: 56px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+        
+        .content form{
+            background: #fff;
+            padding: 3px;
+            border-radius: 8px;
+            display: flex;
+            width: 500px;
+            margin-left: 220px;
+        }
+        .content form input{
+            flex: 1;
+            background: #fff;
+            color: #000;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        .content form button{
+            background: #ff3d00;
+            color: #fff;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 8px;
+
+        }
+        .categorylist{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .category,.category1{
+            width: 120px;
+            height: 60px;
+            color: white;
+            background: rgb(255, 61,0,0.15);
+            margin: 0 10px;
+            margin-top: 390px;
+            font-size: 14px;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            flex-direction: column ;
+        }
+        .category img{
+            width: 42px;
+            margin-bottom:5px ;
+        }
+        .category1 img{
+            width: 28px;
+            margin-bottom: 5px;
+        }
+        .category1 a{
+            color: white;
+            text-decoration: none;
+        }
+        .category a{
+            color: white;
+            text-decoration: none;
+        }
+        .category1 a:hover{
+            text-decoration: underline;
+        }
+        .category a:hover{
+            text-decoration: underline;
+        }
+        section{
+            height: 900px;
+            /* background-color: rgb(74, 74, 87); */
+            background: #fff;
+            text-align: center;
+            padding-top: 200px;
+            font-size: 30px;
+        }
+        aside span{
+            font-size: 20px;
+            margin-top: 25px;
+            color: white;
+            padding:2px;
+            transition: 0.2s;
+        }
+        .socialmedia:hover{
+            font-size: 0px;
+            transition: 0.4s;
+        }
+        .socialmedia:hover::after{
+            content: attr(data-hover);
+            font-size: 17px;
+            color: white;
+            transition: 0.4s;
+        }
+        aside{
+            position: fixed;
+            right: 1px;
+            bottom: 60px;
+            border: 1px solid black;
+            background-color: rgb(39, 35, 35);
+            width: 30px;
+            border-radius: 3px;
+            padding: 1px;
+            padding-left: 3px;
+            transition: 0.2s;
+        }
+        aside:hover{
+            width: 120px;
+            transition: 0.4s;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: rgb(136, 135, 135);
+        }
+        
+
+                                  /* Footer Styles */
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            max-width: 1170px;   
+            margin: auto;
+        }
+        .row{
+            display: flex;
+            flex-wrap:wrap;
+        }
+        ul{
+            list-style:none;
+        }
+        footer{
+            background-color: #24262b;
+            padding: 70px 0;
+            margin-bottom: 50px;
+            padding-left: 80px;
+        }
+        .footer-col{
+            width: 25%;
+            padding: 0 15px;
+        }
+        .footer-col h4{
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+           
+        }
+        /* .footer-col h4::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        } */
+        .underline{
+            width: 30%;
+            height: 4px;
+            background: #848484;
+            border-radius: 3px;
+            position: absolute;
+            top: 30px;
+            left: 0px;
+            overflow: hidden;
+        }
+        .underline span{
+            width: 15px;
+            height: 110%;
+            background:#fff;
+            border-radius: 3px;
+            position: absolute;
+            top: 0;
+            left: 10px;
+            animation: moving 2.3s linear infinite;
+        }
+        @keyframes moving{
+            0%{
+                left: -20px;
+            }
+            100%{
+                left: 100%;
+            }
+        }
+        .footer-col ul li:not(:last-child){
+            margin-bottom: 10px;
+
+        }
+        .footer-col ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.5s ease;
+        }
+        .footer-col ul li a:hover{
+            color: #ffffff;
+            padding-left: 8px;
+        }
+        .footer-col .social-links a{
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin-right: 10px;
+            margin: 0 10px 10px 0;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+        .footer-col .social-links a:hover{
+            color: #24262b;
+            background-color: #ffffff;
+        }@media(max-width:767px){
+            .footer-col{
+            width: 50%;
+            margin-bottom: 30px;
+        } 
+        }
+        @media(max-width:400px){
+            .footer-col{
+            width: 100%;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <video autoplay loop class="back-video" muted plays-inline>
+            <source src="../Images/pexels-rostislav-uzunov-9867271 (1).mp4" type="video/mp4">
+        </video>
+        <div class="maincontent">
+        <nav><div class="logo">WallpaperSite.</div>
+            <ul class="navlink">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Upload</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="btn"> <a href="login.html" target="_blank" >Login</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="content">
+            <h1>#1 Website For Photos & Videos</h1>
+            <form>
+                <input type="text" placeholder="Enter Keyword">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="categorylist">
+            <div class="category">
+                <img src="../Images/imagenature.png">
+                <p><a href="nature.html">Natural Photos</a></p>
+            </div>
+            <div class="category1">
+                <img src="../Images/imageflower.png">
+                <p><a href="flowers.html">Flower Photos</a></p>
+            </div>
+        </div>
+        
+    </div>
+    <section>
+        <h1>&lt; Content &gt;</h1>
+    </section>
+    <aside>
+        <a href="https://www.linkedin.com/in/aaditya-buchale/" target="_blank" ><div class="socialmedia" data-hover="&nbsp;Linkedin"><span class="bi bi bi-linkedin"></span></div></a>
+        <a href="https://twitter.com/aaditya_ab_" target="_blank" ><div class="socialmedia" data-hover="&nbsp;Twitter"><span class="bi bi bi-twitter"></span></div></a>
+        <a href="https://www.facebook.com/aaditya.buchale" target="_blank" ><div class="socialmedia" data-hover="&nbsp;Facebook"><span class="bi bi bi-facebook"></span></div></a>
+    </aside>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company <div class="underline"><span></span></div></h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Our services</a></li>
+                        <li><a href="#">Challanges</a></li>
+                        <li><a href="#">Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help <div class="underline"><span></span></div></h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Report Infringement</a></li>
+                        <li><a href="#">Poopular Searches</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Join <div class="underline"><span></span></div></h4>
+                    <ul>
+                        <li><a href="#">Apps & Plugins</a></li>
+                        <li><a href="#">Change Language</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">SiteMap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us <div class="underline"><span></span></div></h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/aaditya-buchale/" target="_blank" ><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/aaditya_ab_" target="_blank" ><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/aaditya.buchale" target="_blank" ><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://github.com/aadityabuchale?tab=overview&from=2022-09-01&to=2022-09-05" target="_blank" ><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

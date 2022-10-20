@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+<style>
+    header{
+        background-color: black;
+        color: white;
+        font-size: 25px;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 15px;
+    }
+    section{
+        height: 400px;
+        display: grid;
+        grid-template-columns: 6fr 3fr 3fr;
+        font-size: 15px;
+    }
+    footer{
+        background-color: black;
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        padding: 15px;
+    }
+    nav div{
+        color: black;
+        padding: 5px;
+        font-size: 15px;
+        width: 150px;
+        border: 1px solid black;
+        margin-top: 15px;
+        border-radius: 10px;
+        transition:.2s;
+    }
+    nav div:hover{
+        background-color: black;
+        color: white;
+        cursor:pointer;
+        transition: 0.2s;
+        font-size: 18px;
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <span class="bi bi bi-shop">Shopping Site</span>
+    </header>
+    <section>
+        <nav>
+            <div class="bi bi bi-house"> Home</div>
+            <div class="bi bi bi-info-circle"> About</div>
+            <div class="bi bi bi-cart"> Shop</div>
+            <div class="bi-person-lines-fill"> Contact</div>
+        </nav>
+        <main>
+            Thins is Main content
+        </main>
+        <aside>
+            Ads/Social Sites
+        </aside>
+        <footer>
+            &copy;Copyright2022
+
+        </footer>
+    </section>
+</body>
+</html>

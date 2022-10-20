@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        input{
+            color: black;
+        }
+        .username:optional+span{
+            display: none;
+        }
+        .username:required+span{
+            color: red;
+        }
+        .username:valid+span{
+            display: none;
+        }
+        .mobno+div{
+            display: none;
+        }
+        .mobno:invalid+div{
+            color: red;
+            display: block;
+        }
+        .mobno:valid+div{
+            display: none;
+        }
+    </style>
+    
+</head>
+<body>
+   <form>
+    <dl>
+        <dt>Username-</dt>
+        <dd>
+            <input type="text" name="username" required class="username"><span>*</span>
+        </dd>
+        <dt>Mobile No-</dt>
+        <dd>
+            <input type="text" class="mobno" name="mobile" pattern="\+91\d{10}">
+            <div>Enter Number with +91</div>
+        </dd>
+        </dl>
+        <dt>Age</dt>
+        <dd>
+            <input type="number" min="18" max="30" class="age" name="age">
+        </dd>
+        <input type="submit" value="Login" style="margin:20px 100px">
+   </form>
+</body>
+</html>
