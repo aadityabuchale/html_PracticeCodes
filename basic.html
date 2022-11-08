@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+            // window.document.images[0].src="../public/Images/Angular.jpg";
+            // window.document.forms[0].elements[1].value="Submit";
+            // window.document.forms[1].elements[1].value="Register";
+            document.getElementById("img").src="../public/Images/Angular.jpg";
+            document.querySelector("#button").value="Login";
+            document.querySelector(".img").value="Register";
+            collect=document.getElementsByTagName("form");
+            alert("Total Number of Froms: " +collect.length);
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <button name="btn"></button>
+        <h1>Understanding JavaScript</h1>
+        <img height="100px" width="100px" id="img">
+    <div>
+        <form>
+            <h2>Register</h2>
+            User Name <input type="text"> <input type="button" class="img">
+        </form>
+    </div>
+    <div>
+        <form action="">
+            <h2>Login to page</h2>
+            Mail Id <input type="text"> <input type="button" id="button">
+        </form>
+    </div>
+</body>
+</html>
