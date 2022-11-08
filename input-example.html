@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function addClick(){
+            document.getElementById("detailsCont").style.display="block";
+            document.getElementById("lblName").innerHTML=document.getElementById("txtName").value;
+            document.getElementById("lblMobile").innerHTML=document.getElementById("txtMobile").value;
+            document.getElementById("lblMail").innerHTML=document.getElementById("txtMail").value;
+            document.getElementById("lblCity").innerHTML=document.getElementById("lstCity").value;
+
+            age=document.getElementById("optAbove21").value;
+            showmsg="";
+            
+            if(age.checked){
+                showmsg= "Eligible";
+            }
+            else{
+                showmsg= "Not Eligible";
+            }
+            document.getElementById("lblAbove21").innerHTML=showmsg;
+        }
+        function editClick(){
+            document.getElementById("button").innerHTML="Save";
+            document.getElementById("button").className="btn btn-success";
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <div>
+        <button class="btn btn-info mt-3 ms-3" data-bs-toggle="modal" data-bs-target="#popup">Sign In</button>
+    </div>
+    <div class="modal fade" id="popup">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Sign In</h2>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>Name</dt>
+                        <dd ><input id="txtName" type="text" class="form-control"></dd>
+                        <dt>Mobile Number</dt>
+                        <dd><input id="txtMobile" type="text" class="form-control"></dd>
+                        <dt>Mail ID</dt>
+                        <dd><input type="mail" id="txtMail" class="form-control"></dd>
+                        <dt>Loaction</dt>
+                        <dd>
+                            <select class="form-select" id="lstCity">
+                                <option class="form-check-input">Delhi</option>
+                                <option class="form-check-input">Mumbai</option>
+                                <option class="form-check-iput">Pune</option>
+                            </select>
+                        </dd>
+                        <dt>Above 21</dt>
+                        <dd class="form-switch"><input id="optAbove21" class="form-check-input" type="checkbox"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button onclick="addClick()" class="btn btn-warning" id="button" data-bs-dismiss="modal">Submit</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="detailsCont" style="display: none;">
+            <h2 class="mt-4 mb-4">Submitted Details -</h2>
+            <dl class="row ">
+            
+                <dt class="col-3">Student Name </dt>
+                <dd class="col-9" id="lblName"></dd>
+                <dt class="col-3">Mobile Number </dt>
+                <dd class="col-9" id="lblMobile" ></dd>
+                <dt class="col-3">Mail ID </dt>
+                <dd class="col-9" id="lblMail"></dd>
+                <dt class="col-3">Location </dt>
+                <dd class="col-9" id="lblCity"></dd>
+                <dt class="col-3">Above 21 </dt>
+                <dd class="col-9" id="lblAbove21"></dd>
+            </dl>
+            <button onclick="editClick()" class="btn btn-link" data-bs-target="#popup" data-bs-toggle="modal"><span class="bi bi-pencil-fill">Edit </span></button>
+            
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
